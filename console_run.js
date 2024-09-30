@@ -97,7 +97,7 @@ const getTask = async () => {
       const data = await res.json();
       console.log(`-> Successfully Get Task`);
       tasks = data.tasks.filter(
-        (item) => item.id != 1 && item.id != 17 && item.id != 5
+        (item) => item.id != 1 && item.id != 17 && item.id != 5 && item.id != 2
       );
     } else if (res.status == 400) {
       const data = await res.json();
