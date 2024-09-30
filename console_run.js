@@ -178,7 +178,7 @@ const runScript = async () => {
     }
   }
 
-  const totalTime = 30 * 60 * 1000;
+  const totalTime = 60 * 60 * 1000;
   let elapsedTime = 0;
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -190,7 +190,7 @@ const runScript = async () => {
     elapsedTime += 20000;
   }
 
-  console.log(`Successfully Tapping for 30 Minutes`);
+  console.log(`Successfully Tapping for 1 Hour`);
   console.log(`ACCOUNT Process complete`);
   console.log();
 };
