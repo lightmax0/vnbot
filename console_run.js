@@ -178,7 +178,7 @@ const runScript = async () => {
     }
   }
 
-  const totalTime = 60 * 60 * 1000;
+  const totalTime = 240 * 60 * 1000;
   let elapsedTime = 0;
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
