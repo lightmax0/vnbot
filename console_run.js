@@ -97,7 +97,7 @@ const getTask = async () => {
       const data = await res.json();
       console.log(`-> Successfully Get Task`);
       tasks = data.tasks.filter(
-        (item) => item.id != 1 && item.id != 17 && item.id != 5 && item.id != 2
+        (item) => item.id != 1 && item.id != 17 && item.id != 5
       );
     } else if (res.status == 400) {
       const data = await res.json();
@@ -154,9 +154,10 @@ const completeAndClaimTask = async (task) => {
 const runScript = async () => {
   console.log("==============================");
   console.log("=     VANA DATA HERO Bot     =");
-  console.log("=     Created by Widiskel    =");
+  console.log("=     Created by ZeroOne    =");
   console.log("==============================");
   console.log();
+`);
 
   console.log(`-> Getting Player Information`);
   await getPlayerInfo();
@@ -178,7 +179,7 @@ const runScript = async () => {
     }
   }
 
-  const totalTime = 2 * 60 * 1000;
+  const totalTime = 30 * 60 * 1000;
   let elapsedTime = 0;
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -190,7 +191,7 @@ const runScript = async () => {
     elapsedTime += 20000;
   }
 
-  console.log(`Successfully Tapping for 1 Hour`);
+  console.log(`Successfully Tapping for 30 Minutes`);
   console.log(`ACCOUNT Process complete`);
   console.log();
 };
