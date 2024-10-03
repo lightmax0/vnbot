@@ -157,7 +157,6 @@ const runScript = async () => {
   console.log("=     Created by ZeroOne    =");
   console.log("==============================");
   console.log();
-`);
 
   console.log(`-> Getting Player Information`);
   await getPlayerInfo();
