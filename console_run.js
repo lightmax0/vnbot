@@ -37,7 +37,7 @@ const getPlayerInfo = async () => {
     console.log(error);
   }
 };
-const startMining = async () => {
+const startMining = async (task) => {
   try {
     const body = {
       status: "completed",
