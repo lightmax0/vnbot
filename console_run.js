@@ -116,7 +116,7 @@ const completeAndClaimTask = async (task) => {
       status: "completed",
       points: task.points,
     };
-    const res = await fetch(`https://www.vanadatahero.com/api/tasks/${task.id}`, {
+    const res = await fetch("https://www.vanadatahero.com/api/tasks", {
       body: JSON.stringify(body),
       cache: "default",
       credentials: "include",
@@ -154,9 +154,8 @@ const completeAndClaimTask = async (task) => {
 const runScript = async () => {
   console.log("==============================");
   console.log("=     VANA DATA HERO Bot     =");
-  console.log("=     Created by ZeroOne    =");
+  console.log("=     Created by Widiskel    =");
   console.log("==============================");
-  console.log();
 
   console.log(`-> Getting Player Information`);
   await getPlayerInfo();
