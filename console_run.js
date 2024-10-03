@@ -116,7 +116,7 @@ const completeAndClaimTask = async (task) => {
       status: "completed",
       points: task.points,
     };
-    const res = await fetch("https://www.vanadatahero.com/api/tasks", {
+    const res = await fetch(`https://www.vanadatahero.com/api/tasks/${task.id}`, {
       body: JSON.stringify(body),
       cache: "default",
       credentials: "include",
@@ -177,7 +177,7 @@ const runScript = async () => {
     }
   }
 
-  const totalTime = 2 * 60 * 1000;
+  const totalTime = 120 * 60 * 1000;
   let elapsedTime = 0;
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -189,7 +189,7 @@ const runScript = async () => {
     elapsedTime += 20000;
   }
 
-  console.log(`Successfully Tapping for 2 Minutes`);
+  console.log(`Successfully Tapping for 120 Minutes`);
   console.log(`ACCOUNT Process complete`);
   console.log();
 };
