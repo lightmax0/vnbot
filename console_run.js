@@ -188,9 +188,10 @@ const runScript = async () => {
     console.log(`Delaying for 20 Seconds Before Tapping...`);
     await delay(20000);
     startMining();
+    attempts++;
     elapsedTime += 20000;
   }
-  attempts++;
+  
   if (attempts >= elapsedTime * 15) {
       console.error("Reached maximum number of attempts. Stopping.");
       break;
