@@ -178,9 +178,8 @@ const runScript = async () => {
     }
   }
 
-  const totalTime = 240 * 60 * 1000;
+  const totalTime = 2 * 60 * 1000;
   let elapsedTime = 0;
-  let attempts = 0;
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
   startMining();
@@ -188,13 +187,8 @@ const runScript = async () => {
     console.log(`Delaying for 20 Seconds Before Tapping...`);
     await delay(20000);
     startMining();
-    attempts++;
     elapsedTime += 20000;
   }
-  
-  if (attempts >= elapsedTime * 15) {
-      console.error("Reached maximum number of attempts. Stopping.");
-    }
 
   console.log(`Successfully Tapping for 1 Hour`);
   console.log(`ACCOUNT Process complete`);
