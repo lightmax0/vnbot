@@ -37,14 +37,10 @@ const getPlayerInfo = async () => {
     console.log(error);
   }
 };
-const startMining = async (task) => {
+const startMining = async () => {
   try {
-    const body = {
-      status: "completed",
-      points: task.points,
-    };
     const res = await fetch("https://www.vanadatahero.com/api/tasks/1", {
-      body: JSON.stringify(body),
+      body: '{"status":"completed","points":100}',
       cache: "default",
       credentials: "include",
       headers: {
@@ -184,6 +180,7 @@ const runScript = async () => {
 
   const totalTime = 240 * 60 * 1000;
   let elapsedTime = 0;
+  let attempts = 0;
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
   startMining();
@@ -193,6 +190,11 @@ const runScript = async () => {
     startMining();
     elapsedTime += 20000;
   }
+  attempts++;
+  if (attempts >= elapsedTime * 15) {
+      console.error("Reached maximum number of attempts. Stopping.");
+      break;
+    }
 
   console.log(`Successfully Tapping for 1 Hour`);
   console.log(`ACCOUNT Process complete`);
