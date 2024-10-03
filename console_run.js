@@ -194,7 +194,6 @@ const runScript = async () => {
   
   if (attempts >= elapsedTime * 15) {
       console.error("Reached maximum number of attempts. Stopping.");
-      break;
     }
 
   console.log(`Successfully Tapping for 1 Hour`);
