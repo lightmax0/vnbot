@@ -154,7 +154,7 @@ const completeAndClaimTask = async (task) => {
 const runScript = async () => {
   console.log("==============================");
   console.log("=     VANA DATA HERO Bot     =");
-  console.log("=     Created by Widiskel    =");
+  console.log("=     Created By ZeroOne    =");
   console.log("==============================");
 
   console.log(`-> Getting Player Information`);
@@ -177,7 +177,7 @@ const runScript = async () => {
     }
   }
 
-  const totalTime = 120 * 60 * 1000;
+  const totalTime = 240 * 60 * 1000;
   let elapsedTime = 0;
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -189,7 +189,7 @@ const runScript = async () => {
     elapsedTime += 20000;
   }
 
-  console.log(`Successfully Tapping for 120 Minutes`);
+  console.log(`Successfully Tapping for 240 Minutes`);
   console.log(`ACCOUNT Process complete`);
   console.log();
 };
